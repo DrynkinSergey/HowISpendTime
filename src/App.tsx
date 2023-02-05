@@ -1,12 +1,20 @@
-import Timers from "./components/Timers"
+import { Timers } from "./components/Timers"
+import { UserInfo } from "./components/UserInfo/UserInfo"
 
-function App() {
+import './scss/main.scss'
+
+const App = () => {
 
   return (
-    <div className="App">
-      <Timers/>
+    <div className="app">
+      <div className="container">
+        <UserInfo />
+        <div className="timerList">
+          <Timers />
+        </div>
+      </div>
     </div>
-    
+
   )
 }
 
