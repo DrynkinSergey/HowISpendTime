@@ -30,9 +30,9 @@ const App = () => {
         <div className="timerList">
           <Timers />
         </div>
-        <div style={{ width: '40px', height: '40px', backgroundColor: 'red' }} onClick={newTimer}>
+        {/* <div style={{ width: '40px', height: '40px', backgroundColor: 'red' }} onClick={newTimer}>
           +
-        </div>
+        </div> */}
       </div>
     </div>
 
