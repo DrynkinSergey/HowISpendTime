@@ -22,7 +22,10 @@
             display: flex;
             justify-content: space-between;
         }
-
+        .currentTime{
+            display: flex;
+            gap:10px;
+        }
         .titleOfTimer {
             display: flex;
             justify-content: space-between;
@@ -31,7 +34,7 @@
         }
 
         .timeOfTimer {
-            font-size: calc($fontIndex*1.8);
+            font-size: calc($fontIndex*1);
             margin-bottom: 10px;
         }
 
@@ -41,18 +44,7 @@
     }
 }
 
-.controlTimerBtn {
-    transform: translateX(30px);
-    border: none;
-    margin-right: 4px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
 
-    &:hover {
-        cursor: pointer;
-    }
-}
 
 .deleteTimer {
     text-align: center;
@@ -71,14 +63,13 @@
     border-radius: 4px;
 }
 
-.start {
-    background-color: green;
+.timerControl
+ {
+    background-color: $mainColor;
+    color: $fontColorDark;
+    cursor: pointer;
+    font-size: calc($fontIndex);
 }
-
-.pause {
-    background-color: yellow;
-}
-
-.stop {
-    background-color: red;
+.active{
+    color:rgb(1, 254, 1)
 }

@@ -1,12 +1,10 @@
-import { useId } from "react"
-import { useDispatch } from "react-redux"
+import { useEffect, useId } from "react"
 import { Timers } from "./components/Timers"
 import { UserInfo } from "./components/UserInfo/UserInfo"
 
 import './scss/main.scss'
 import { useAppDispatch, useAppSelector } from "./store/hooks"
-import { addTimer } from "./store/slices/timerSlice"
-import { AppDispatch } from "./store/store"
+import { addTimer, setTimers } from "./store/slices/timerSlice"
 
 
 const App = () => {
@@ -22,6 +20,13 @@ const App = () => {
     }
     dispatch(addTimer(timer))
   }
+  useEffect(() => {
+    const data = localStorage.getItem('timers');
+    if (data) dispatch(setTimers(JSON.parse(data)))
+  }, [])
+  useEffect(() => {
+    window.localStorage.setItem('timers', JSON.stringify(timers))
+  }, [timers])
 
   return (
     <div className="app">
