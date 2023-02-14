@@ -6,28 +6,7 @@ interface StateI {
 }
 
 const initialState: StateI = {
-	timers: [
-		{
-			id: 1,
-			title: 'Typescript',
-			time: {
-				seconds: 0,
-				minutes: 0,
-				hours: 0,
-			},
-			color: '#FD8A68',
-		},
-		{
-			id: 2,
-			title: 'JS',
-			time: {
-				seconds: 10,
-				minutes: 0,
-				hours: 0,
-			},
-			color: '#FD8A68',
-		},
-	],
+	timers: [],
 }
 
 export const timerSlice = createSlice({

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import timerReducer from './slices/timerSlice'
+import userReducer from './slices/userSlice'
 export const store = configureStore({
-    reducer: {
-        timer: timerReducer,
-    },
+	reducer: {
+		timer: timerReducer,
+		user: userReducer,
+	},
 })
 
 export type RootState = ReturnType<typeof store.getState>
